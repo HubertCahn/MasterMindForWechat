@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
     while not is_finished:
         count += 1
-        user_input = input('Please input your answer:')
+        user_input = raw_input('Please input your answer:')
         judge_result = number_judger(TRUE_ANSWER, user_input)
         is_finished = judge_result[0]
         if not is_finished:
