@@ -1,0 +1,73 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script type="text/javascript" >
+$(document).ready(function(){
+    var number = 1;
+    $("button").click(function(){
+        var _id = this.id;
+        var _class = this.className;
+        var num = Number($("p")[_id].textContent);
+
+        if(_class == "add"){
+            $("p")[_id].textContent = num == 9?0:num+1;
+        }else{
+            $("p")[_id].textContent = num == 0?9:num-1;
+        }
+    });
+});  
+</script>
+<style type="text/css">
+    body {
+        padding: 40px;
+        font-family: -webkit-pictograph;
+        text-align: center;
+  }
+    
+    table{
+        text-align: center;
+        margin: auto;
+        margin-top: 200px;
+    }
+    
+    p{
+        margin: auto;
+        font-size: 40px;
+    }
+    
+    button{
+        height: 35px;
+        width: 30px;
+        
+        margin: 10px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    <p></p>
+<table border="0">
+  <tr>
+    <th><button id="1" class="add"/></th>
+    <th><button id="2" class="add"/></th>
+    <th><button id="3" class="add"/></th>
+    <th><button id="4" class="add"/></th>
+  </tr>
+  <tr>
+    <th><p type="text" id="1">0</p></th>
+    <th><p id="2">0</p></th>
+    <th><p id="3">0</p></th>
+    <th><p id="4">0</p></th>
+  </tr>   
+ <tr>
+    <th><button id="1" class="sub"/></th>
+    <th><button id="2" class="sub"/></th>
+    <th><button id="3" class="sub"/></th>
+    <th><button id="4" class="sub"/></th>
+  </tr>
+</table>
+</body>
+</html>
